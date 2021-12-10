@@ -10,7 +10,7 @@ urwid = "*"
 click = "*"
 
 [dev-packages]
-pytest = "*"
+pytest = ">=5.2,<5.3"
 pytest-cov = "*"
 pytest-mock = "*"
 pylint = "*"
