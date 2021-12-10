@@ -466,7 +466,7 @@ class NotesDB():
 
         # 1. for any note changed locally, including new notes:
         #        save note to server, update note with response
-        for _, local_key in enumerate(self.notes.keys()):
+        for _, local_key in enumerate(list(self.notes.keys())):
             note = self.notes[local_key]
 
             if not note.get('id') or \
