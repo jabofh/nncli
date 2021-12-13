@@ -177,7 +177,10 @@ class Nncli:
             self.logger.log('ERROR: Key does not exist')
             return
 
-        content = exec_cmd_on_note(note, self.config, self.nncli_gui,
+        if from_stdin:
+            content = ''.join(sys.stdin)
+        else:
+            content = exec_cmd_on_note(note, self.config, self.nncli_gui,
                                    self.logger)
         if not content:
             return

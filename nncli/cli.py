@@ -167,7 +167,7 @@ def delete(nncli, key):
     """Delete an existing note."""
     nncli.cli_note_delete(key, True)
 
-@click.command()
+@click.command(short_help="Edit an existing note.")
 @click.option(
         '-k',
         '--key',
@@ -175,10 +175,14 @@ def delete(nncli, key):
         type=click.INT,
         help="Specify the note key."
         )
+@click.argument('from_stdin', metavar='[-]', type=STDIN_FLAG)
 @click.pass_obj
 def edit(nncli, key):
-    """Edit an existing note."""
-    nncli.cli_note_edit(key)
+    """
+    Edit an existing note. If - is specified, the note contents are
+    read from stdin, otherwise the editor will open.
+    """
+    nncli.cli_note_edit(from_stdin, key)
 
 @click.command(short_help="Import a JSON note.")
 @click.argument('from_stdin', metavar='[-]', type=STDIN_FLAG)
