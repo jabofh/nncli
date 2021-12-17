@@ -18,11 +18,12 @@ classifiers = [
 	"Programming Language :: Python :: 3 :: Only",
 ]
 dependencies = [
-	"urwid",
-	"requests",
 	"appdirs",
 	"click",
+	"requests",
+	"urwid",
 ]
+
 dynamic = [ "version", "description" ]
 
 [project.urls]
@@ -31,22 +32,19 @@ Homepage = "https://nncli.org"
 
 [project.optional-dependencies]
 dev = [
+	"flit",
+	"mock",
+	"pathlib2; python_version < '3.5'",
 	"pip-tools",
-	"pytest>=5.2,<5.3",
+	"pylint",
 	"pytest-cov",
 	"pytest-mock",
-	"pylint",
-	"pudb",
-	"sphinx",
-	"flit",
-	"setuptools",
-	"mock",
-	"tox",
-	"pathlib2; python_version < '3.5'",
+	"pytest>=6.2.5",
 	"scandir; python_version < '3.5'",
-	"vulture",
+	"sphinx",
 	"sphinx-rtd-theme",
 	"sphinx-sitemap",
+	"vulture",
 ]
 doc = [
 	"sphinx",
@@ -54,3 +52,39 @@ doc = [
 
 [project.scripts]
 nncli = "nncli.cli:main"
+
+[tool.coverage.run]
+branch = true
+omit = "nncli/__main__.py"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.pytest.ini_options]
+mock_use_standalone_module = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py34, py35, py36, py37, py38, pylint, coverage
+skipsdist = True
+
+[testenv:pylint]
+deps = -rrequirements-dev.txt
+whitelist_externals = make
+commands =
+    make lint
+
+[testenv:coverage]
+deps = -rrequirements-dev.txt
+whitelist_externals = make
+commands =
+    make coverage
+
+[testenv]
+deps = -rrequirements-dev.txt
+whitelist_externals = make
+commands =
+    make install
+    python -m pytest
+"""
