@@ -75,7 +75,7 @@ cat.add_command(rm_category, 'rm')
 @click.pass_obj
 def favorite(nncli, key):
     """Mark as note as a favorite."""
-    nncli.cli_note_favorite(key, 1)
+    nncli.cli_note_favorite(key, True)
 
 @click.command()
 @click.option(
@@ -88,7 +88,7 @@ def favorite(nncli, key):
 @click.pass_obj
 def unfavorite(nncli, key):
     """Remove favorite flag from a note."""
-    nncli.cli_note_favorite(key, 0)
+    nncli.cli_note_favorite(key, False)
 
 @click.command(short_help="Print JSON-formatted note to stdout.")
 @click.option('-k', '--key', type=click.INT, help="Specify the note key.")
