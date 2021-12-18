@@ -170,7 +170,7 @@ class Nncli:
         notes_data = [n.note for n in note_list]
         print(json.dumps(notes_data, indent=2))
 
-    def cli_note_edit(self, key):
+    def cli_note_edit(self, from_stdin, key):
         """Edit a note from the command line"""
         note = self.ndb.get_note(key)
         if not note:

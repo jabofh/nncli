@@ -177,7 +177,7 @@ def delete(nncli, key):
         )
 @click.argument('from_stdin', metavar='[-]', type=STDIN_FLAG)
 @click.pass_obj
-def edit(nncli, key):
+def edit(nncli, key, from_stdin):
     """
     Edit an existing note. If - is specified, the note contents are
     read from stdin, otherwise the editor will open.
