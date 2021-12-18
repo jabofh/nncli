@@ -422,7 +422,7 @@ class NotesDB():
         """Convert a note key into a file name"""
         return os.path.join(self.config.get_config('db_path'), str(k)) + '.json'
 
-    def _helper_save_note(self, k, note):
+    def save_note(self, k, note):
         """Save a note to the file system"""
         # Save a single note to disc.
         func = self._helper_key_to_fname(k)
@@ -634,7 +634,7 @@ class NotesDB():
 
         for key in list(local_updates.keys()):
             try:
-                self._helper_save_note(key, self.notes[key])
+                self.save_note(key, self.notes[key])
             except WriteError as ex:
                 raise WriteError(str(ex))
             self.log("Saved note to disk (key={0})".format(key))

@@ -130,7 +130,10 @@ class Nncli:
         if content:
             self.logger.log('New note created')
             self.ndb.create_note(content)
-            self.ndb.sync_now()
+            if self.config.state.do_server_sync:
+                self.ndb.sync_now()
+            else:
+                self.ndb.save_note(note['localkey'], note)
 
     def cli_note_import(self, from_stdin):
         """Import a note from the command line"""
@@ -145,7 +148,10 @@ class Nncli:
                 note = json.loads(raw)
                 self.logger.log('New note created')
                 self.ndb.import_note(note)
-                self.ndb.sync_now()
+                if self.config.state.do_server_sync:
+                    self.ndb.sync_now()
+                else:
+                    self.ndb.save_note(note['localkey'], note)
             except ValueError as ex:
                 self.logger.log('(IMPORT) ValueError: {}'.format(ex))
                 sys.exit(1)
@@ -191,7 +197,10 @@ class Nncli:
         if md5_old != md5_new:
             self.logger.log('Note updated')
             self.ndb.set_note_content(note['localkey'], content)
-            self.ndb.sync_now()
+            if self.config.state.do_server_sync:
+                self.ndb.sync_now()
+            else:
+                self.ndb.save_note(note['localkey'], note)
         else:
             self.logger.log('Note unchanged')
 
@@ -203,7 +212,10 @@ class Nncli:
             return
 
         self.ndb.set_note_deleted(key, delete)
-        self.ndb.sync_now()
+        if self.config.state.do_server_sync:
+            self.ndb.sync_now()
+        else:
+            self.ndb.save_note(note['localkey'], note)
 
     def cli_note_favorite(self, key, favorite):
         """Favorite a note from the command line"""
@@ -213,7 +225,10 @@ class Nncli:
             return
 
         self.ndb.set_note_favorite(key, favorite)
-        self.ndb.sync_now()
+        if self.config.state.do_server_sync:
+            self.ndb.sync_now()
+        else:
+            self.ndb.save_note(note['localkey'], note)
 
     def cli_note_category_get(self, key):
         """Get a note category from the command line"""
@@ -233,7 +248,10 @@ class Nncli:
             return
 
         self.ndb.set_note_category(key, category.lower())
-        self.ndb.sync_now()
+        if self.config.state.do_server_sync:
+            self.ndb.sync_now()
+        else:
+            self.ndb.save_note(note['localkey'], note)
 
     def cli_note_category_rm(self, key):
         """Remove a note category from the command line"""
