@@ -25,9 +25,9 @@ Fixed
  - nncli: Always check do_server_sync before syncing
 
 Removed
+ - docs: Remove CI badge
  - docs: Don't build PDF
  - Remove Pipenv in favor of the simpler pip-tools
-
 
 v0.3.5 - 2021-12-10 [4]
 -------------------
