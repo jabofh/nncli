@@ -42,12 +42,14 @@ dev = [
 	"pytest>=6.2.5",
 	"scandir; python_version < '3.5'",
 	"sphinx",
-	"sphinx-rtd-theme",
+	"sphinx-material",
 	"sphinx-sitemap",
 	"vulture",
 ]
 doc = [
 	"sphinx",
+	"sphinx-material",
+	"sphinx-sitemap",
 ]
 
 [project.scripts]

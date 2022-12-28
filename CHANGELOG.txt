@@ -9,6 +9,7 @@ Semantic Versioning [2].
 Unreleased [3]
 ----------
 Changed
+ - docs: Change to material theme
  - README: Add reference to mailing list
  - Update pyproject.toml
  - Convert Makefiles to POSIX style
