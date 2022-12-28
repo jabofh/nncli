@@ -55,7 +55,6 @@ dist:
 
 docs:
 	make -C docs html
-	make -C docs latexpdf
 	make -C docs man
 	$(BROWSER) docs/build/html/index.html
 

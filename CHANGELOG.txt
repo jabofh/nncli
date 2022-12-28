@@ -25,6 +25,7 @@ Fixed
  - nncli: Always check do_server_sync before syncing
 
 Removed
+ - docs: Don't build PDF
  - Remove Pipenv in favor of the simpler pip-tools
 
 
