@@ -17,18 +17,44 @@ NextCloud Notes Command Line Interface
 
 .. include:: ../../README.rst
 
-Contents
---------
+Documentation Contents
+----------------------
 
 .. toctree::
    :maxdepth: 2
 
    configuration
    usage
+   contributing
+   changelog
+
+.. toctree::
+   :caption: Manuals
+   :titlesonly:
+
+   nncli.1
+   nncli-sync.1
+   nncli-list.1
+   nncli-export.1
+   nncli-dump.1
+   nncli-create.1
+   nncli-import.1
+   nncli-edit.1
+   nncli-delete.1
+   nncli-favorite.1
+   nncli-cat.1
+   nncli.config.5
 
 
-Indices and tables
-------------------
+Index
+-----
 
-* :ref:`genindex`
-* :ref:`search`
+:ref:`genindex`
+
+.. _homepage: https://nncli.org
+.. _sncli: https://github.com/insanum/sncli
+.. _Python 3: http://python.org
+.. _Urwid: http://urwid.org
+.. _Requests: https://requests.readthedocs.org/en/master
+.. _simplenote.py: https://github.com/mrtazz/simplenote.py
+.. _nvpy: https://github.com/cpbotha/nvpy

@@ -1,25 +1,7 @@
 Usage
 =====
 
-.. program:: nncli
-
-When ``nncli`` is run without any options or arguments an interactive
-console GUI will appear. The behavior of this interface is highly
-configurable (see: :ref:`configuration`).
-
-In addition to this default behavior, there are several options
-available when calling ``nncli`` without a subcommand.
-
-.. option:: --help, -h
-
-Displays a brief decription of the ``nncli`` options and subcommands.
-
-.. option:: --version, -V
-
-Displays the version information.
-
-Also available when calling ``nncli`` by itself is the ``--config``
-option, for which see: :ref:`general-options`.
+.. include:: usage/genopts.rst
 
 Subcommands
 -----------
@@ -51,34 +33,8 @@ scripting against your NextCloud Notes database. The subcommands are:
 These subcommands and the options available to them are described below.
 
 .. _general-options:
-
-General Subcommand Options
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Several ``nncli`` options apply to multiple subcommands. They are:
-
-.. option:: --verbose, -v
-
-Print verbose logging information to ``stdout``
-
-.. option:: --nosync, -n
-
-Operate only on the local notes cache. Do not reach out to the server.
-
-.. option:: --regex, -r
-
-For subcommands that accept a search string, treat the search string as
-a regular expression.
-
-.. option:: --key, -k
-
-The ID of the note to operate on. This option is required for many of
-the subcommands.
-
-.. option:: --config, -c
-
-Specify the config file to read from. This option is only required to
-override the default location (see: :ref:`config-file`).
+.. include:: usage/genopts.rst
+.. include:: usage/subopts.rst
 
 nncli sync
 ~~~~~~~~~~
@@ -87,124 +43,63 @@ nncli sync
 
 Command format: ``nncli sync``
 
-Performs a full, bi-directional sync between the local notes cache and
-the NextCloud Notes server. There are no available options for this
-subcommand.
-
-- Available options: None
-
-- Arguments: None
+.. include:: usage/sync-desc.rst
 
 nncli list
 ~~~~~~~~~~
 
 .. program:: nncli list
 
-Command format: ``nncli list [search_string]``
+Command format: :program:`nncli list` [*options*] [*search_string*]
 
-List notes by ID, flags, and title. Flags indicate whether the note has
-been modified locally (``X``), and/or if it is marked as a favorite
-(``*``).
+.. include:: usage/list-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - ``--regex, -r`` See :ref:`general-options`
-
-- Arguments:
-
-  - ``search_string`` Optional. A search term used to refine the search.
+.. include:: usage/list-args.rst
 
 nncli export
 ~~~~~~~~~~~~
 
 .. program:: nncli export
 
-Command format: ``nncli export [search_string]``
+Command format: :program:`nncli export` [*options*] [*search_string*]
 
-Exports notes in raw, JSON format. The JSON format is a superset of the
-format outlined in the NextCloud Notes API specification with
-information added for managing the local notes cache. Note that nncli
-still stores all the notes data in the directory specified by
-``cfg_db_path``, so for easy backups, it may be easier/quicker to simply
-backup this entire directory.
+.. include:: usage/export-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - :ref:`general-options`
-
-     - ``--regex, -r`` Mutually exclusive with ``--key``
-
-     - ``--key, -k``
-
-- Arguments:
-
-  - ``search_string`` Required if ``--regex`` is specified. A search
-    term used to refine the search.
+.. include:: usage/export-args.rst
 
 Example:
 
-.. code-block:: sh
-
-   # export a single note by id
-   nncli -k somekeyid export
-
-   # export all notes
-   nncli export
-
-   # export notes matching search string
-   nncli [-r] export some search keywords or regex
+.. include:: usage/export-example.rst
 
 nncli dump
 ~~~~~~~~~~
 
 .. program:: nncli dump
 
-Command format: ``nncli dump [search_string]``
+Command format: :program:`nncli dump` [search_string]``
 
-Prints notes to ``stdout``. The printed format is the text of the note
-preceeded by a header displaying information about the note title, key,
-modified date, category, and flags. Flags indicate whether the note has
-been modified locally (``X``), and/or if it is marked as a favorite
-(``*``).
+.. include:: usage/dump-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - :ref:`general-options`
-
-     - ``--regex, -r`` Mutually exclusive with ``--key``
-
-     - ``--key, -k``
-
-- Arguments:
-
-  - ``search_string`` Required if ``--regex`` is specified. A search
-    term used to refine the search.
+.. include:: usage/dump-args.rst
 
 nncli create
 ~~~~~~~~~~~~
 
 .. program:: nncli create
 
-Command format: ``nncli create [-]``
+Command format: program:`nncli create` [*-*]
 
-Create a note. Without arguments, this command will open your configured
-editor. The note syncs to the server after the editor is closed.
-
-- Available options: None
-
-- Arguments:
-
-  - `-` Optional. If specified, the note content is read from ``stdin``.
+.. include: usage/create-desc.rst
 
 Example:
 
-.. code-block:: sh
-
-   # create a new note and open in editor
-   nncli create
-
-   # create a new note with contents of stdin
-   echo 'hi' | nncli create -
+.. include:: usage/create-example.rst
 
 nncli import
 ~~~~~~~~~~~~
@@ -213,104 +108,67 @@ nncli import
 
 Command format: ``nncli import [-]``
 
-Import a JSON-formatted note. nncli can import notes from raw json data
-(via stdin or editor). Allowed fields are ``content``, ``category``,
-``favorite``, and ``modified``.
-
-- Available options: None
-
-- Arguments:
-
-  - ``-`` Optional. If specified, the note content is read from ``stdin``.
+.. include:: usage/import-desc.rst
 
 Example:
 
-.. code-block:: none
-
-   echo '{"category":"testing","content":"New note!"}' | nncli import -
+.. include:: usage/import-example.rst
 
 nncli edit
 ~~~~~~~~~~
 
 .. program:: nncli edit
 
-Command format: ``nncli -k <key> edit``
+Command format: :program:`nncli` [*--key|-k*] *KEY edit*
 
-Open the note specified by ``<key>`` in the configured editor. The note
-syncs to the server after the editor is saved and closed.
+.. include:: usage/edit-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - ``--key, -k`` Required. See :ref:`general-options`
-
-- Arguments: None
+.. include:: usage/edit-args.rst
 
 nncli delete
 ~~~~~~~~~~~~
 
 .. program:: nncli delete
 
-Command format: ``nncli -k <key> delete``
+Command format: :program:`nncli` [*--key|-k*] *KEY delete*
 
-Delete the note specified by ``<key>``.
+.. include:: usage/delete-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - ``--key, -k`` Required. See :ref:`general-options`
-
-- Arguments: None
+.. include:: usage/delete-args.rst
 
 nncli favorite
 ~~~~~~~~~~~~~~
 
 .. program:: nncli favorite
 
-Command format: ``nncli -k <key> favorite|unfavorite``
+Command format: :program:`nncli` *--key|-k KEY favorite|unfavorite*
 
-Favorite (or unfavorite) the note specified by ``<key>``.
+.. include:: usage/favorite-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - ``--key, -k`` Required. See :ref:`general-options`
-
-- Arguments: None
+.. include:: usage/favorite-args.rst
 
 nncli cat
 ~~~~~~~~~
 
 .. program:: nncli cat
 
-Command format: ``nncli -k <key> cat get|set|rm``
+Command format: :program:`nncli` *--key|-k KEY cat get|set|rm* [*category_name*]
 
-Read or modify a note category from the command line.
+.. include:: usage/cat-desc.rst
 
-- Available options:
+Options are as follows:
 
-  - ``--key, -k`` Required. See :ref:`general-options`
-
-- Arguments:
-
-  - ``get`` Get the note category
-
-  - ``set`` Set the note category
-
-  - ``rm`` Remove the note category
+.. include:: usage/cat-args.rst
 
 Example:
 
-.. code-block:: sh
-
-   # Retrieve note category (e.g. "category1")
-   nncli -k somekeyid cat get
-   # Returns "category1"
-
-   # Add a category to a note, overwriting any existing one
-   nncli -k somekeyid cat set "category3"
-   # Now tagged as "category3"
-
-   # Remove a category from a note
-   nncli -k somekeyid cat rm
-   # Note now has no category
+.. include:: usage/cat-example.rst
 
 Console GUI Usage
 -----------------

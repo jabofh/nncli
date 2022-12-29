@@ -7,3 +7,5 @@ MANIFEST
 docs/build/
 .tox
 htmlcov/
+docs/html/
+docs/man/

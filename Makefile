@@ -50,12 +50,8 @@ coverage-html: coverage
 release: dist
 	twine upload -s dist/*
 
-dist:
-	flit build
-
 docs:
-	make -C docs html
-	make -C docs man
+	make -C docs html man
 	$(BROWSER) docs/build/html/index.html
 
 install:
