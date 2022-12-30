@@ -68,24 +68,24 @@ mock_use_standalone_module = true
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py34, py35, py36, py37, py38, pylint, coverage
+envlist = py37, py38, py39, py310, pylint, coverage
 skipsdist = True
 
 [testenv:pylint]
 deps = -rrequirements-dev.txt
-whitelist_externals = make
+allowlist_externals = make
 commands =
     make lint
 
 [testenv:coverage]
 deps = -rrequirements-dev.txt
-whitelist_externals = make
+allowlist_externals = make
 commands =
     make coverage
 
 [testenv]
 deps = -rrequirements-dev.txt
-whitelist_externals = make
+allowlist_externals = make
 commands =
     make install
     python -m pytest
