@@ -18,7 +18,7 @@ globally install ``nncli`` and its dependencies with ``pip3 install
 nncli``.
 
 If you are interested in packaging ``nncli`` for various
-distributions, please consult the file CONTRIBUTING.rst in this
+distributions, please consult the file CONTRIBUTING.rst_ in this
 repository and reach out to the mailing list with any questions.
 
 Features
@@ -67,6 +67,7 @@ Schauenberg and the notes_db.py module from nvpy_ by Charl P. Botha.
 
 .. _homepage: https://nncli.org
 .. _sncli: https://github.com/insanum/sncli
+.. _CONTRIBUTING.rst: https://git.danielmoch.com/nncli/tree/CONTRIBUTING.rst
 .. _Python 3: http://python.org
 .. _Urwid: http://urwid.org
 .. _Requests: https://requests.readthedocs.org/en/master
