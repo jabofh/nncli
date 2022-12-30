@@ -19,6 +19,7 @@ Changed
  - cli: Modify edit to accept from_stdin flag
 
 Added
+ - Add community guidelines
  - Add stdin flag to edit subcommand
  - Add TODO
 
