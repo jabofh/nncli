@@ -1,6 +1,8 @@
 Usage
 =====
 
+.. _general-options:
+
 .. include:: usage/genopts.rst
 
 Subcommands
@@ -32,8 +34,6 @@ scripting against your NextCloud Notes database. The subcommands are:
 
 These subcommands and the options available to them are described below.
 
-.. _general-options:
-.. include:: usage/genopts.rst
 .. include:: usage/subopts.rst
 
 nncli sync
