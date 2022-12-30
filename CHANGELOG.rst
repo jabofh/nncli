@@ -9,6 +9,16 @@ The format is based on `Keep a Changelog`_, and this project adheres to
 `Unreleased`_
 -------------
 Changed
+
+Added
+
+Fixed
+
+Removed
+
+`v0.3.6`_ - 2022-12-30
+----------------------
+Changed
  - docs: Major refactor to provide manual pages
  - docs: Change to material theme
  - README: Add reference to mailing list
@@ -138,7 +148,8 @@ Changed
 
 .. _Keep a Changelog: https://keepachangelog.com/en/1.0.0/
 .. _Semantic Versioning: https://semver.org/spec/v2.0.0.html
-.. _Unreleased: https://git.danielmoch.com/nncli/diff/?id=master&id2=v0.3.5
+.. _Unreleased: https://git.danielmoch.com/nncli/diff/?id=master&id2=v0.3.6
+.. _v0.3.6: https://git.danielmoch.com/nncli/diff/?id=v0.3.6&id2=v0.3.5
 .. _v0.3.5: https://git.danielmoch.com/nncli/diff/?id=v0.3.5&id2=v0.3.4
 .. _v0.3.4: https://git.danielmoch.com/nncli/diff/?id=v0.3.4&id2=v0.3.3
 .. _v0.3.3: https://git.danielmoch.com/nncli/diff/?id=v0.3.3&id2=v0.3.2
