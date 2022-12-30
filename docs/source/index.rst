@@ -50,11 +50,3 @@ Index
 -----
 
 :ref:`genindex`
-
-.. _homepage: https://nncli.org
-.. _sncli: https://github.com/insanum/sncli
-.. _Python 3: http://python.org
-.. _Urwid: http://urwid.org
-.. _Requests: https://requests.readthedocs.org/en/master
-.. _simplenote.py: https://github.com/mrtazz/simplenote.py
-.. _nvpy: https://github.com/cpbotha/nvpy

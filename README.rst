@@ -64,3 +64,11 @@ Acknowledgements
 nncli is a fork of sncli_ by Eric Davis. This application further pulls
 in and uses modified versions of the simplenote.py_ module by Daniel
 Schauenberg and the notes_db.py module from nvpy_ by Charl P. Botha.
+
+.. _homepage: https://nncli.org
+.. _sncli: https://github.com/insanum/sncli
+.. _Python 3: http://python.org
+.. _Urwid: http://urwid.org
+.. _Requests: https://requests.readthedocs.org/en/master
+.. _simplenote.py: https://github.com/mrtazz/simplenote.py
+.. _nvpy: https://github.com/cpbotha/nvpy
