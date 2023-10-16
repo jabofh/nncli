@@ -9,7 +9,8 @@ The format is based on `Keep a Changelog`_, and this project adheres to
 `Unreleased`_
 -------------
 Changed
-- Updated links in CHANGELOG due to Git host backend change
+ - Updated links in CHANGELOG due to Git host backend change
+ - Other documentation updates
 
 Added
 
