@@ -6,17 +6,11 @@ All notable changes to this project will be documented in this file.
 The format is based on `Keep a Changelog`_, and this project adheres to
 `Semantic Versioning`_.
 
-`Unreleased`_
+`v0.3.7`_ - 2023-10-16
 -------------
 Changed
  - Updated links in CHANGELOG due to Git host backend change
  - Other documentation updates
-
-Added
-
-Fixed
-
-Removed
 
 `v0.3.6`_ - 2022-12-30
 ----------------------
@@ -150,7 +144,7 @@ Changed
 
 .. _Keep a Changelog: https://keepachangelog.com/en/1.0.0/
 .. _Semantic Versioning: https://semver.org/spec/v2.0.0.html
-.. _Unreleased: https://git.danielmoch.com/nncli/diff/v0.3.6..master
+.. _v0.3.7: https://git.danielmoch.com/nncli/diff/v0.3.6..v0.3.7
 .. _v0.3.6: https://git.danielmoch.com/nncli/diff/v0.3.5..v0.3.6
 .. _v0.3.5: https://git.danielmoch.com/nncli/diff/v0.3.4..v0.3.5
 .. _v0.3.4: https://git.danielmoch.com/nncli/diff/v0.3.3..v0.3.4
