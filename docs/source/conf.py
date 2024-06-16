@@ -93,7 +93,7 @@ html_theme_options = {
     'color_accent': 'blue',
 
     # Set the repo location to get a badge with stats
-    'repo_url': 'https://git.danielmoch.com/nncli/',
+    'repo_url': 'https://github.com/djmoch/nncli/',
     'repo_name': 'Git Repository',
     'repo_type': None,
 

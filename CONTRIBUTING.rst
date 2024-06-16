@@ -64,30 +64,20 @@ updating requirements files.
 Discussion and Requests
 -----------------------
 
-All discussion takes place on the public `mailing list`_. The list's
-archive can be found at https://lists.danielmoch.com/nncli-dev. Emails
-can be sent to the following addresses to manage your subscription to
-the mailing list.
+All discussion takes place on the `issue tracker`_.
 
-- nncli-dev+subscribe@
-- nncli-dev+unsubscribe@
-- nncli-dev+help@
-
-Patches and pull requests are welcome, preferably via emailed output
-of `git-request-pull(1)`_ sent to the mailing list. Bug reports should
-also be directed to the mailing list.
-
-If you aren't hosting a fork anywhere online, you can also send patches
-using `git-format-patch(1)`_.
+Pull requests are welcome.
 
 Releases
 --------
 
-Releases are published to PyPI_. Signed source tarballs are maintained
-at https://dl.danielmoch.com/nncli. Instructions for verifying
-tarballs are in the README file at the previous link.
+Releases are published to PyPI_.
+Signed source tarballs are maintained on the `releases page`_.
+Archives are signed with `signify`.
+To support the use of `minisign`, which is compatable with `signify`,
+detached signatures will be created.
+Signature files are indicated with a .minisig extension.
 
 .. _PyPI: https://pypi.org/project/nncli/
-.. _mailing list: nncli-dev@danielmoch.com
-.. _git-format-patch(1): https://www.git-scm.com/docs/git-format-patch
-.. _git-request-pull(1): https://www.git-scm.com/docs/git-request-pull
+.. _issue tracker: https://github.com/djmoch/nncli/issues
+.. _releases page: https://github.com/djmoch/nncli/releases
