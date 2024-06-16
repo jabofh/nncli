@@ -1,3 +1,8 @@
+.. attention::
+
+   This project has been archived and is no longer being developed.
+   Please reach out to the maintainer if you would like to adopt it.
+
 ``nncli`` is a Python application that gives you access to your NextCloud
 Notes account via the command line. It's a "hard" fork of
 sncli_. You can access your notes via
