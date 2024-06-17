@@ -73,10 +73,23 @@ Releases
 
 Releases are published to PyPI_.
 Signed source tarballs are maintained on the `releases page`_.
-Archives are signed with `signify`.
-To support the use of `minisign`, which is compatable with `signify`,
+
+Release artifacts created prior to December 1, 2022 can be verified
+in one of two ways:
+
+1. Each .tar.gz archive is signed inline with ``signify`` and can be
+   verified (using the -z flag) against the public key located at
+   https://www.danielmoch.com/static/djmoch-signify.pub
+
+2. Using the .sig file corresponding to an archive, verification can
+   be done with ``gpg`` against the public key located at
+   https://www.danielmoch.com/static/gpg.asc
+
+Archives created on or after December 1, 2022 will only be signed with
+``signify``, and not with ``gpg``.
+To support the use of ``minisign``, which is compatable with ``signify``,
 detached signatures will be created.
-Signature files are indicated with a .minisig extension.
+These signature files are indicated with a ``.minisig`` extension.
 
 .. _PyPI: https://pypi.org/project/nncli/
 .. _issue tracker: https://github.com/djmoch/nncli/issues
