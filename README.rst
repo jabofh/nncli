@@ -72,7 +72,7 @@ Schauenberg and the notes_db.py module from nvpy_ by Charl P. Botha.
 
 .. _homepage: https://nncli.org
 .. _sncli: https://github.com/insanum/sncli
-.. _CONTRIBUTING.rst: https://git.danielmoch.com/nncli/tree/CONTRIBUTING.rst
+.. _CONTRIBUTING.rst: https://github.com/djmoch/nncli/blob/master/CONTRIBUTING.rst
 .. _Python 3: http://python.org
 .. _Urwid: http://urwid.org
 .. _Requests: https://requests.readthedocs.org/en/master
