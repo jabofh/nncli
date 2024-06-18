@@ -1,7 +1,0 @@
-# See LICENSE file for copyright and license information
-version: 2
-updates:
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
