@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Changelog &#8212; nncli 0.3.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="canonical" href="https://nncli.org/changelog.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nncli(1)" href="nncli.1.html" />
+    <link rel="prev" title="Contribution Guide" href="contributing.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=grey data-md-color-accent=blue>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#changelog" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="nncli 0.3.8 documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#xe261</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">NextCloud Notes Command Line Interface</span>
+          <span class="md-header-nav__topic"> Changelog </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/djmoch/nncli/" title="Go to repository" class="md-source" data-md-source="github">
+
+  <div class="md-source__repository">
+    Git Repository
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Home</a></li>
+            
+            <li class="md-tabs__item"><a href="genindex.html" class="md-tabs__link">Index</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="nncli 0.3.8 documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#xe261</i>
+      
+    </a>
+    <a href="index.html"
+       title="nncli 0.3.8 documentation">NextCloud Notes Command Line Interface</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/djmoch/nncli/" title="Go to repository" class="md-source" data-md-source="github">
+
+  <div class="md-source__repository">
+    Git Repository
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="configuration.html" class="md-nav__link">Configuration</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="usage.html" class="md-nav__link">Usage</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Contribution Guide</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Changelog </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Changelog</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#changelog--page-root" class="md-nav__link">Changelog</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#v0-3-7-2023-10-16" class="md-nav__link">v0.3.7 - 2023-10-16</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-6-2022-12-30" class="md-nav__link">v0.3.6 - 2022-12-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-5-2021-12-10" class="md-nav__link">v0.3.5 - 2021-12-10</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-4-2019-03-08" class="md-nav__link">v0.3.4 - 2019-03-08</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-3-2019-02-25" class="md-nav__link">v0.3.3 - 2019-02-25</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-2-2018-12-01" class="md-nav__link">v0.3.2 – 2018-12-01</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-1-2018-10-30" class="md-nav__link">v0.3.1 – 2018-10-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-0-2018-09-07" class="md-nav__link">v0.3.0 – 2018-09-07</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-2-0-2018-09-03" class="md-nav__link">v0.2.0 – 2018-09-03</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-2-2018-08-30" class="md-nav__link">v0.1.2 – 2018-08-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-1-2018-08-07" class="md-nav__link">v0.1.1 – 2018-08-07</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-0-2018-07-31" class="md-nav__link">v0.1.0 – 2018-07-31</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/changelog.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-7-2023-10-16" class="md-nav__link">v0.3.7 - 2023-10-16</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-6-2022-12-30" class="md-nav__link">v0.3.6 - 2022-12-30</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-5-2021-12-10" class="md-nav__link">v0.3.5 - 2021-12-10</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-4-2019-03-08" class="md-nav__link">v0.3.4 - 2019-03-08</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-3-2019-02-25" class="md-nav__link">v0.3.3 - 2019-02-25</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-2-2018-12-01" class="md-nav__link">v0.3.2 – 2018-12-01</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-1-2018-10-30" class="md-nav__link">v0.3.1 – 2018-10-30</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-3-0-2018-09-07" class="md-nav__link">v0.3.0 – 2018-09-07</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-2-0-2018-09-03" class="md-nav__link">v0.2.0 – 2018-09-03</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-1-2-2018-08-30" class="md-nav__link">v0.1.2 – 2018-08-30</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-1-1-2018-08-07" class="md-nav__link">v0.1.1 – 2018-08-07</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#v0-1-0-2018-07-31" class="md-nav__link">v0.1.0 – 2018-07-31</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Manuals</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli.1.html" class="md-nav__link">nncli(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-sync.1.html" class="md-nav__link">nncli-sync(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-list.1.html" class="md-nav__link">nncli-list(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-export.1.html" class="md-nav__link">nncli-export(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-dump.1.html" class="md-nav__link">nncli-dump(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-create.1.html" class="md-nav__link">nncli-create(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-import.1.html" class="md-nav__link">nncli-import(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-edit.1.html" class="md-nav__link">nncli-edit(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-delete.1.html" class="md-nav__link">nncli-delete(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-favorite.1.html" class="md-nav__link">nncli-favorite(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli-cat.1.html" class="md-nav__link">nncli-cat(1)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nncli.config.5.html" class="md-nav__link">nncli.config(5)</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#changelog--page-root" class="md-nav__link">Changelog</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#v0-3-7-2023-10-16" class="md-nav__link">v0.3.7 - 2023-10-16</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-6-2022-12-30" class="md-nav__link">v0.3.6 - 2022-12-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-5-2021-12-10" class="md-nav__link">v0.3.5 - 2021-12-10</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-4-2019-03-08" class="md-nav__link">v0.3.4 - 2019-03-08</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-3-2019-02-25" class="md-nav__link">v0.3.3 - 2019-02-25</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-2-2018-12-01" class="md-nav__link">v0.3.2 – 2018-12-01</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-1-2018-10-30" class="md-nav__link">v0.3.1 – 2018-10-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-3-0-2018-09-07" class="md-nav__link">v0.3.0 – 2018-09-07</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-2-0-2018-09-03" class="md-nav__link">v0.2.0 – 2018-09-03</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-2-2018-08-30" class="md-nav__link">v0.1.2 – 2018-08-30</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-1-2018-08-07" class="md-nav__link">v0.1.1 – 2018-08-07</a>
+        </li>
+        <li class="md-nav__item"><a href="#v0-1-0-2018-07-31" class="md-nav__link">v0.1.0 – 2018-07-31</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/changelog.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="changelog">
+<h1 id="changelog--page-root">Changelog<a class="headerlink" href="#changelog--page-root" title="Permalink to this headline">¶</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to
+<a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<section id="v0-3-7-2023-10-16">
+<h2 id="v0-3-7-2023-10-16"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.6..v0.3.7">v0.3.7</a> - 2023-10-16<a class="headerlink" href="#v0-3-7-2023-10-16" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Updated links in CHANGELOG due to Git host backend change</p></li>
+<li><p>Other documentation updates</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-6-2022-12-30">
+<h2 id="v0-3-6-2022-12-30"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.5..v0.3.6">v0.3.6</a> - 2022-12-30<a class="headerlink" href="#v0-3-6-2022-12-30" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>docs: Major refactor to provide manual pages</p></li>
+<li><p>docs: Change to material theme</p></li>
+<li><p>README: Add reference to mailing list</p></li>
+<li><p>Update pyproject.toml</p></li>
+<li><p>Convert Makefiles to POSIX style</p></li>
+<li><p>consolidate tool configs in pyproject.toml</p></li>
+<li><p>update requirements-dev.txt</p></li>
+<li><p>cli: Modify edit to accept from_stdin flag</p></li>
+</ul>
+</dd>
+<dt>Added</dt><dd><ul class="simple">
+<li><p>Add community guidelines</p></li>
+<li><p>Add stdin flag to edit subcommand</p></li>
+<li><p>Add TODO</p></li>
+</ul>
+</dd>
+<dt>Fixed</dt><dd><ul class="simple">
+<li><p>cli: Fix (un)favorite</p></li>
+<li><p>nncli: Always check do_server_sync before syncing</p></li>
+</ul>
+</dd>
+<dt>Removed</dt><dd><ul class="simple">
+<li><p>docs: Remove CI badge</p></li>
+<li><p>docs: Don’t build PDF</p></li>
+<li><p>Remove Pipenv in favor of the simpler pip-tools</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-5-2021-12-10">
+<h2 id="v0-3-5-2021-12-10"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.4..v0.3.5">v0.3.5</a> - 2021-12-10<a class="headerlink" href="#v0-3-5-2021-12-10" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Update copyright info in docs</p></li>
+<li><p>Make filtered_notes_sort public</p></li>
+<li><p>Use $VISUAL instead of $EDITOR</p></li>
+<li><p>clipboard: Silence calls to ‘which’</p></li>
+<li><p>Smarten up the way we set defaults for cfg_editor</p></li>
+<li><p>Add mailmap</p></li>
+<li><p>Allow syncing in Python 3.8 and later</p></li>
+<li><p>Constrain pytest version</p></li>
+</ul>
+</dd>
+<dt>Added</dt><dd><ul class="simple">
+<li><p>clipboard: Add support for xclip</p></li>
+<li><p>Add initial hack at a manual</p></li>
+<li><p>Tox: Add py38 testing</p></li>
+</ul>
+</dd>
+<dt>Fixed</dt><dd><ul class="simple">
+<li><p>Fixed ‘nncli create’ to work without any arguments (credit: lifesbest23)</p></li>
+<li><p>clipboard: Fix line continuations</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-4-2019-03-08">
+<h2 id="v0-3-4-2019-03-08"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.3..v0.3.4">v0.3.4</a> - 2019-03-08<a class="headerlink" href="#v0-3-4-2019-03-08" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Fix crashing bug in view_log.py</p></li>
+<li><p>Refactor gui.py based on pylint findings</p></li>
+</ul>
+</dd>
+<dt>Removed</dt><dd><ul class="simple">
+<li><p>Pipfile.lock</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-3-2019-02-25">
+<h2 id="v0-3-3-2019-02-25"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.2..v0.3.3">v0.3.3</a> - 2019-02-25<a class="headerlink" href="#v0-3-3-2019-02-25" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>Documentation</p>
+<ul>
+<li><p>TODO and CHANGELOG formatting</p></li>
+<li><p>docutils.conf</p></li>
+<li><p>sitemap</p></li>
+<li><p>Canonical URL</p></li>
+<li><p>robots.txt</p></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Changed SafeConfigParser to ConfigParser</p></li>
+<li><p>Reversed test logic in _log_timeout to avoid popping off on an empty
+stack. This bug was leading to fatal crashes.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-2-2018-12-01">
+<h2 id="v0-3-2-2018-12-01"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.1..v0.3.2">v0.3.2</a> – 2018-12-01<a class="headerlink" href="#v0-3-2-2018-12-01" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>CHANGELOG.rst</p></li>
+<li><p>TODO.txt</p></li>
+<li><p>clear_ids.py contrib script</p></li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>References to Github repo changed to point to git.danielmoch.com</p></li>
+<li><p>Fixed exception in nncli sync</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-1-2018-10-30">
+<h2 id="v0-3-1-2018-10-30"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.3.0..v0.3.1">v0.3.1</a> – 2018-10-30<a class="headerlink" href="#v0-3-1-2018-10-30" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>Partial unit testing for nncli.py module</p></li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Refactored code (addressing pylint findings)</p></li>
+<li><p>Fixed bad exception handling in Python 3.4</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-3-0-2018-09-07">
+<h2 id="v0-3-0-2018-09-07"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.2.0..v0.3.0">v0.3.0</a> – 2018-09-07<a class="headerlink" href="#v0-3-0-2018-09-07" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>Documentation as PDF format</p></li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Numerous documentation corrections</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-2-0-2018-09-03">
+<h2 id="v0-2-0-2018-09-03"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.1.2..v0.2.0">v0.2.0</a> – 2018-09-03<a class="headerlink" href="#v0-2-0-2018-09-03" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>.travis.yml</p></li>
+<li><p>Pytest, tox, et all added to support automated testing</p></li>
+<li><p>Both tox and Travis testing back to Python 3.4</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-1-2-2018-08-30">
+<h2 id="v0-1-2-2018-08-30"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.1.1..v0.1.2">v0.1.2</a> – 2018-08-30<a class="headerlink" href="#v0-1-2-2018-08-30" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>Support for –version flag</p></li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>requirements.txt replaced with Pipfile{,.lock}</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-1-1-2018-08-07">
+<h2 id="v0-1-1-2018-08-07"><a class="reference external" href="https://git.danielmoch.com/nncli/diff/v0.1.0..v0.1.1">v0.1.1</a> – 2018-08-07<a class="headerlink" href="#v0-1-1-2018-08-07" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Added</dt><dd><ul class="simple">
+<li><p>README content included in PyPI</p></li>
+</ul>
+</dd>
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>README content and formatting</p></li>
+<li><p>Fix nncli import command</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="v0-1-0-2018-07-31">
+<h2 id="v0-1-0-2018-07-31">v0.1.0 – 2018-07-31<a class="headerlink" href="#v0-1-0-2018-07-31" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Changed</dt><dd><ul class="simple">
+<li><p>Hard fork of sncli</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="contributing.html" title="Contribution Guide"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Contribution Guide </span>
+              </div>
+            </a>
+          
+          
+            <a href="nncli.1.html" title="nncli(1)"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> nncli(1) </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2018-2022, Daniel Moch.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
