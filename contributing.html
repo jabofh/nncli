@@ -464,11 +464,22 @@ $ source .venv/bin/activate
 <section id="releases">
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permalink to this headline">¶</a></h2>
 <p>Releases are published to <a class="reference external" href="https://pypi.org/project/nncli/">PyPI</a>.
-Signed source tarballs are maintained on the <a class="reference external" href="https://github.com/djmoch/nncli/releases">releases page</a>.
-Archives are signed with <cite>signify</cite>.
-To support the use of <cite>minisign</cite>, which is compatable with <cite>signify</cite>,
+Signed source tarballs are maintained on the <a class="reference external" href="https://github.com/djmoch/nncli/releases">releases page</a>.</p>
+<p>Release artifacts created prior to December 1, 2022 can be verified
+in one of two ways:</p>
+<ol class="arabic simple">
+<li><p>Each .tar.gz archive is signed inline with <code class="docutils literal notranslate"><span class="pre">signify</span></code> and can be
+verified (using the -z flag) against the public key located at
+<a class="reference external" href="https://www.danielmoch.com/static/djmoch-signify.pub">https://www.danielmoch.com/static/djmoch-signify.pub</a></p></li>
+<li><p>Using the .sig file corresponding to an archive, verification can
+be done with <code class="docutils literal notranslate"><span class="pre">gpg</span></code> against the public key located at
+<a class="reference external" href="https://www.danielmoch.com/static/gpg.asc">https://www.danielmoch.com/static/gpg.asc</a></p></li>
+</ol>
+<p>Archives created on or after December 1, 2022 will only be signed with
+<code class="docutils literal notranslate"><span class="pre">signify</span></code>, and not with <code class="docutils literal notranslate"><span class="pre">gpg</span></code>.
+To support the use of <code class="docutils literal notranslate"><span class="pre">minisign</span></code>, which is compatable with <code class="docutils literal notranslate"><span class="pre">signify</span></code>,
 detached signatures will be created.
-Signature files are indicated with a .minisig extension.</p>
+These signature files are indicated with a <code class="docutils literal notranslate"><span class="pre">.minisig</span></code> extension.</p>
 </section>
 </section>
 
