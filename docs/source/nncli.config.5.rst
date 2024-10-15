@@ -12,7 +12,7 @@ standard location for your platform:
 
 .. describe:: macOS
 
-  $HOME/Library/Preferences/nncli
+  $HOME/Library/Application\ Support/nncli
 
 .. describe:: Linux/BSD
 
